@@ -1,10 +1,8 @@
 backend:
   name: git-gateway
   branch: master
-media_folder: "src/static/img"  # This should be defined at the root level of your config
-public_folder: "/static/img"    # Correctly set as per your original config
-
-# Define a simple default media library configuration if needed
+media_folder: "src/static/img"
+public_folder: "/static/img"
 
 collections:
   - label: "Blog"
@@ -18,13 +16,14 @@ collections:
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Author", name: "author", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Image", name: "image", widget: "image" }
       - { label: "Body", name: "body", widget: "markdown" }
       - widget: select
         label: "tags"
         name: "tags"
         multiple: true
         create: true
-        options: ["Tags", "created", "from", "config.yml"]
+        options: ["Tags", "created", "from"]
   - label: "Settings"
     name: "settings"
     editor:
@@ -61,11 +60,13 @@ collections:
           - { label: "Name", name: "name", widget: "string" }
           - { label: "Author", name: "author", widget: "string" }
           - { label: "URL", name: "url", widget: "string" }
+          - { label: "Site Title", name: "siteTitle", widget: "string" }
+          - { label: "Site SEO description", name: "siteSeoDescription", widget: "string" }
       - label: "Store Settings"
         name: "snipcartSettings"
         file: "src/_data/snipcartSettings.yaml"
         fields:
-          - { label: "API Key", name: "name", widget: "string" }
+          - { label: "Snipcart API Key", name: "name", widget: "string" }
       - label: "Home Page Settings"
         name: "homeSettings"
         file: "src/_data/homeSettings.yaml"
@@ -95,3 +96,38 @@ collections:
             name: "showBanners"
             widget: "boolean"
             default: true
+      - label: "About"
+        name: "about"
+        file: "src/_data/about.yaml"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Content", name: "content", widget: "text" }
+          - { label: "Image", name: "image", widget: "image" }
+      - label: "Testimonials"
+        name: "testimonials"
+        file: "src/_data/testimonials.yaml"
+        fields:
+          - { label: "Full Name", name: "name", widget: "string" }
+          - { label: "Content", name: "content", widget: "text" }
+          - { label: "Image", name: "image", widget: "image" }
+          - { label: "Job", name: "job", widget: "string" }
+      - label: "Features"
+        name: "features"
+        file: "src/_data/features.yaml"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Content", name: "content", widget: "text" }
+          - { label: "Image", name: "image", widget: "image" }
+      - label: "Inline Banners"
+        name: "inlineBanners"
+        file: "src/_data/inlineBanners.yaml"
+        fields:
+          - { label: "Banner Title", name: "title", widget: "string" }
+          - { label: "Banner Image", name: "image", widget: "image" }
+      - label: "Hero"
+        name: "hero"
+        file: "src/_data/hero.yaml"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - { label: "Image", name: "image", widget: "image" }
