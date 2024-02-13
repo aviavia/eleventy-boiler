@@ -1,6 +1,6 @@
+# Adjusted to a list structure
 testimonials:
-  - name: HOLDEN CAULFIELD
-    content: Edisone
-    job: Senior Product Designer
-    image: /static/img/testimonial1.jpg
+  - name: John Doe
+    content: Great service...
+    image: /path/to/image.jpg
 

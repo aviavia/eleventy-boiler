@@ -1,0 +1,4 @@
+features:
+  - title: "Single Feature Title"
+    content: "Description of the single feature. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    image: "/static/img/single-feature.jpg"
