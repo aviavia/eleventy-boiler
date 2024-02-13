@@ -1,4 +1,22 @@
 features:
-  - title: "Single Feature Title"
-    content: "Description of the single feature. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-    image: "/static/img/single-feature.jpg"
+  - title: Advanced Responsive Design
+    content: amstack templates with responsive design that look amazing on any
+      device, from mobile to desktop.
+    image: /static/img/cms.png
+  - title: Optimized Loading Speed
+    content: Jamstack services that ensure ultra-fast loading times, enhancing user
+      experience and search engine ranking.
+    image: /static/img/cms.png
+  - title: Unlimited Scalability
+    content: Jamstack templates and services with robust security measures to
+      protect your website against cyber threats.
+    image: /static/img/cms.png
+  - title: Flexible Integrations
+    content: Jamstack services with the ability to seamlessly integrate with various
+      third-party tools and services for expanded functionality.
+    image: /static/img/cms.png
+  - title: Simplified Maintenance
+    content: Easy-to-maintain and update Jamstack templates and services, allowing
+      you to focus on growing your business rather than worrying about
+      technology.
+    image: /static/img/cms.png
