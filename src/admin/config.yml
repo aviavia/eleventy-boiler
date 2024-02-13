@@ -1,7 +1,3 @@
-backend:
-  name: git-gateway
-  branch: master
-
 media_folder: "src/static/img"  # This should be defined at the root level of your config
 public_folder: "/static/img"    # Correctly set as per your original config
 
@@ -9,25 +5,93 @@ public_folder: "/static/img"    # Correctly set as per your original config
 media_library:
   name: default
 
+
 collections:
   - label: "Blog"
     name: "blog"
     folder: "src/posts"
     create: true
+    editor:
+      preview: false
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Author", name: "author", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
-      - { label: "Tags", name: "tags", widget: "list" }
+      - widget: select
+        label: "tags"
+        name: "tags"
+        multiple: true
+        create: true
+        options: ["Tags", "created", "from", "config.yml"]
   - label: "Settings"
     name: "settings"
+    editor:
+      preview: false
     files:
-      - label: "Site Settings"
-        name: "siteSettings"
-        file: "src/settings.yaml"
+      - label: "Navigation"
+        name: "items"
+        file: "src/_data/navigation.yaml"
         fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Description", name: "description", widget: "text" }
-          # Add other site settings fields as needed
+          - label: "Nav Items"
+            name: "items"
+            widget: list
+            allow_add: false
+            collapsed: false
+            fields:
+              - { label: "Title", name: "text", widget: "string" }
+              - { label: "URL", name: "url", widget: "string" }
+      - label: "Quick Links"
+        name: "links"
+        file: "src/_data/quicklinks.yaml"
+        fields:
+          - label: "Nav Items"
+            name: "links"
+            widget: list
+            collapsed: false
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "URL", name: "url", widget: "string" }
+              - { label: "Description", name: "desc", widget: "string" }
+      - label: "Meta Settings"
+        name: "settings"
+        file: "src/_data/settings.yaml"
+        fields:
+          - { label: "Name", name: "name", widget: "string" }
+          - { label: "Author", name: "author", widget: "string" }
+          - { label: "URL", name: "url", widget: "string" }
+      - label: "Store Settings"
+        name: "snipcartSettings"
+        file: "src/_data/snipcartSettings.yaml"
+        fields:
+          - { label: "API Key", name: "name", widget: "string" }
+      - label: "Home Page Settings"
+        name: "homeSettings"
+        file: "src/_data/homeSettings.yaml"
+        fields:
+          - label: "Direction"
+            name: "direction"
+            widget: "boolean"
+            default: false
+            hint: "Enable for RTL. Leave disabled for LTR."
+          - label: "Show Hero Section"
+            name: "showHero"
+            widget: "boolean"
+            default: true
+          - label: "Show Features Section"
+            name: "showFeatures"
+            widget: "boolean"
+            default: true
+          - label: "Show About Section"
+            name: "showAbout"
+            widget: "boolean"
+            default: true
+          - label: "Show Testimonials Section"
+            name: "showTestimonials"
+            widget: "boolean"
+            default: true
+          - label: "Show Inline Banners Section"
+            name: "showBanners"
+            widget: "boolean"
+            default: true
