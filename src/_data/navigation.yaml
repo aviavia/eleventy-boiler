@@ -3,7 +3,7 @@ items:
     url: /about
   - text: Workshops
     url: /workshops
-  - text: Menu Three
-    url: "#"
+  - text: Store
+    url: /store
   - text: Blog
     url: /blog
