@@ -1,12 +1,10 @@
+backend:
+  name: git-gateway
+  branch: master
 media_folder: "src/static/img"  # This should be defined at the root level of your config
 public_folder: "/static/img"    # Correctly set as per your original config
 
 # Define a simple default media library configuration if needed
-media_library:
-  name: default
-backend:
-  name: git-gateway
-  branch: master
 
 collections:
   - label: "Blog"
