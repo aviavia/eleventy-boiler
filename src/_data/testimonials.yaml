@@ -1,0 +1,6 @@
+testimonials:
+  - name: "HOLDEN CAULFIELD"
+    content: "Edisone"
+    job: "Senior Product Designer"
+    image: "/static/img/testimonial1.jpg"
+  # Add more testimonials as needed
