@@ -1,4 +1,17 @@
 quickLinks:
-  - title: "Quick Link 1"
-    url: "/link1"
-    desc: "Description for Quick Link 1."
+  - title: Quick Link 1
+    url: /link1
+    desc: Description for Quick Link 1.
+links:
+  - title: first link
+    url: https://alterdemy.com
+    desc: this is the description
+  - title: second link
+    url: https://netlify.com
+    desc: more description
+  - title: third link
+    url: https://google.com
+    desc: google
+  - title: another link
+    url: google.com
+    desc: more description
