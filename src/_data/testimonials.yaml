@@ -1,6 +1,19 @@
-# Adjusted to a list structure
 testimonials:
   - name: John Doe
-    content: Great service...
-    image: /path/to/image.jpg
-
+    content: Impressed with the efficiency and modern design of the Jamstack
+      templates provided by this agency. They have truly elevated our website
+      experience!
+    image: /static/img/avi-face.jpg
+    job: Secret Agent
+  - name: Yaron akiva
+    content: The Jamstack services offered by this agency are top-notch! Our
+      website's performance has significantly improved since switching to their
+      solutions. Highly recommended!
+    image: /static/img/avi-face.jpg
+    job: COO
+  - content: Exceptional customer service and high-quality Jamstack templates! This
+      agency has exceeded our expectations in delivering innovative solutions
+      for our website needs."
+    name: Dvir hariel
+    job: Cook
+    image: /static/img/avi-face.jpg
