@@ -1,6 +1,13 @@
 testimonials:
-  - name: "HOLDEN CAULFIELD"
-    content: "Edisone"
-    job: "Senior Product Designer"
-    image: "/static/img/testimonial1.jpg"
-  # Add more testimonials as needed
+  - name: HOLDEN CAULFIELD
+    content: Edisone
+    job: Senior Product Designer
+    image: /static/img/testimonial1.jpg
+name: avi a
+content: '"I highly recommend Jamstack Agency to anyone in need of fast, secure,
+  and reliable web development solutions. Their experienced team is responsive
+  and always delivers satisfying results. With Jamstack Agency, I feel confident
+  that my projects will be completed successfully and on time. Thank you,
+  Jamstack Agency!"'
+image: /static/img/avi-face.jpg
+job: seo
