@@ -66,3 +66,37 @@ collections:
           - { label: Name, name: name, widget: string }
           - { label: Author, name: author, widget: string }
           - { label: URL, name: url, widget: string }
+     - label: "Store Settings"
+        name: "snipcartSettings"
+        file: "src/_data/snipcartSettings.yaml"
+        fields:
+          - { label: API Key, name: name, widget: string }
+     - label: "Home Page Settings"
+        name: "homeSettings"
+        file: "src/_data/homeSettings.yaml"
+        fields:
+          - label: "Direction"
+            name: "direction"
+            widget: "boolean"
+            default: false
+            hint: "Enable for RTL. Leave disabled for LTR."
+          - label: "Show Hero Section"
+            name: "showHero"
+            widget: "boolean"
+            default: true
+          - label: "Show Features Section"
+            name: "showFeatures"
+            widget: "boolean"
+            default: true
+          - label: "Show About Section"
+            name: "showAbout"
+            widget: "boolean"
+            default: true
+          - label: "Show Testimonials Section"
+            name: "showTestimonials"
+            widget: "boolean"
+            default: true
+          - label: "Show Inline Banners Section"
+            name: "showBanners"
+            widget: "boolean"
+            default: true
