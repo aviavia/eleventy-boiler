@@ -12,6 +12,8 @@ module.exports = function (eleventyConfig) {
 
   // Merge data instead of overriding
   eleventyConfig.setDataDeepMerge(true);
+  eleventyConfig.addPassthroughCopy("admin");
+
 
   // snipcart api key
   const snipcartSettingsPath = path.join(__dirname, 'src', '_data', 'snipcartSettings.yaml');
