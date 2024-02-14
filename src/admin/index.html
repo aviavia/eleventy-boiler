@@ -11,5 +11,20 @@
 
         <!-- Netlify Identity Widget -->
         <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+        <!-- Custom widgets for Netlify CMS -->
+        <script type="text/javascript">
+            // Ensure Netlify CMS is initialized before we try to register widgets
+            if (window.CMS) {
+                // Register the custom widgets
+                CMS.registerWidget('audio', AudioWidgetControl, AudioWidgetPreview);
+                CMS.registerWidget('video', VideoWidgetControl, VideoWidgetPreview);
+            } else {
+                console.error("Netlify CMS not found");
+            }
+        </script>
+
+        <!-- Your custom widget script -->
+        <script src="cms/customWidgets.js"></script>
     </body>
 </html>
