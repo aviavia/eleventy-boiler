@@ -7,9 +7,9 @@ author: Surjith S M
 date: 2020-09-01
 image: /static/img/tailwindlogo.jpeg
 tags:
-  - left
-  - center
-  - right
+  - created
+isPublished: true
+isRestricted: true
 ---
 # This is a Heading h1
 
