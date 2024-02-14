@@ -18,12 +18,8 @@ collections:
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Image", name: "image", widget: "image" }
       - { label: "Body", name: "body", widget: "markdown" }
-      - label: "Featured Audio"
-        name: "featuredAudio"
-        widget: "audio"
-      - label: "Featured Video"
-        name: "featuredVideo"
-        widget: "video"
+      - { label: "Featured Audio Link", name: "featuredAudio", widget: "string", required: false, hint: "URL to the audio file" }
+      - { label: "Featured Video Link", name: "featuredVideo", widget: "string", required: false, hint: "URL to the video file" }
       - widget: select
         label: "Tags"
         name: "tags"
