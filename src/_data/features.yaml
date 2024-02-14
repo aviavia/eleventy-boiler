@@ -1,5 +1,6 @@
-header: "Explore More"
-shortDescription: "Dive deeper with these quick links to our most popular pages."
+show_section: true
+header: Explore More
+shortDescription: Dive deeper with these quick links to our most popular pages.
 features:
   - title: Advanced Responsive Design
     content: amstack templates with responsive design that look amazing on any
