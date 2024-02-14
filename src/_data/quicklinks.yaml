@@ -1,5 +1,6 @@
-header: "Explore More"
-shortDescription: "Dive deeper with these quick links to our most popular pages."
+show_section: false
+header: Explore More
+shortDescription: Dive deeper with these quick links to our most popular pages.
 links:
   - title: first link
     url: https://alterdemy.com
