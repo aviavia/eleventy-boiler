@@ -23,13 +23,15 @@
     {% include "./partials/navbar.html" %}
 
     {{ content | safe }}
-
+    {% if page.url == '/' %}
     {% include "./partials/hero.html" %}
     {% include "./partials/features.html" %}
     {% include "./partials/about.html" %}
     {% include "./partials/testimonials.html" %}
     {% include "./partials/quickLinks.html" %}
     {% include "./partials/footer.html" %}
+    {% endif %}
+
   </div>
   <script src="/static/js/alpine.js"></script>
 
