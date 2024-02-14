@@ -68,7 +68,7 @@ collections:
         fields:
           - { label: "Show Section", name: "show_section", widget: "boolean" }
           - { label: "Header", name: "header", widget: "string" }
-          - { label: "very Short Description", name: "shortDescription", widget: "text" }
+          - { label: "Short Description", name: "shortDescription", widget: "text" }
           - label: "Links"
             name: "links"
             widget: "list"
