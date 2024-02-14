@@ -46,6 +46,8 @@ collections:
         file: "src/_data/quicklinks.yaml"
         fields:
           - label: "Nav Items"
+          - { label: "Header", name: "header", widget: "string" }
+          - { label: "Short Description", name: "shortDescription", widget: "text" }
             name: "links"
             widget: "list"
             collapsed: false
@@ -110,6 +112,8 @@ collections:
         allow_add: true
         collapsed: false
         fields:
+          - { label: "Header", name: "header", widget: "string" }
+          - { label: "Short Description", name: "shortDescription", widget: "text" }
           - label: "Testimonial Items"
             name: "testimonials"
             widget: "list"
@@ -125,6 +129,8 @@ collections:
         allow_add: true
         collapsed: false
         fields:
+          - { label: "Header", name: "header", widget: "string" }
+          - { label: "Short Description", name: "shortDescription", widget: "text" }
           - label: "Feature Items"
             name: "features"
             widget: "list"

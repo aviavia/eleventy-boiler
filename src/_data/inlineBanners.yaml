@@ -1,3 +1,5 @@
+header: "Explore More"
+shortDescription: "Dive deeper with these quick links to our most popular pages."
 inlineBanners:
   - title: "Spring Sale"
     image: "/static/img/spring-sale.jpg"

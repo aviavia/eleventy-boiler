@@ -1,7 +1,5 @@
-quickLinks:
-  - title: Quick Link 1
-    url: /link1
-    desc: Description for Quick Link 1.
+header: "Explore More"
+shortDescription: "Dive deeper with these quick links to our most popular pages."
 links:
   - title: first link
     url: https://alterdemy.com
