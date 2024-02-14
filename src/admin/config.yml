@@ -35,7 +35,7 @@ collections:
         fields:
           - label: "Nav Items"
             name: "items"
-            widget: list
+            widget: "list"
             allow_add: false
             collapsed: false
             fields:
@@ -46,8 +46,6 @@ collections:
         file: "src/_data/quicklinks.yaml"
         fields:
           - label: "Nav Items"
-          - { label: "Header", name: "header", widget: "string" }
-          - { label: "Short Description", name: "shortDescription", widget: "text" }
             name: "links"
             widget: "list"
             collapsed: false
@@ -112,8 +110,6 @@ collections:
         allow_add: true
         collapsed: false
         fields:
-          - { label: "Header", name: "header", widget: "string" }
-          - { label: "Short Description", name: "shortDescription", widget: "text" }
           - label: "Testimonial Items"
             name: "testimonials"
             widget: "list"
@@ -122,15 +118,12 @@ collections:
               - { label: "Content", name: "content", widget: "text" }
               - { label: "Image", name: "image", widget: "image" }
               - { label: "Job", name: "job", widget: "string" }
-
       - label: "Features"
         name: "features"
         file: "src/_data/features.yaml"
         allow_add: true
         collapsed: false
         fields:
-          - { label: "Header", name: "header", widget: "string" }
-          - { label: "Short Description", name: "shortDescription", widget: "text" }
           - label: "Feature Items"
             name: "features"
             widget: "list"
@@ -138,12 +131,11 @@ collections:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Content", name: "content", widget: "text" }
               - { label: "Image", name: "image", widget: "image" }
-
       - label: "Inline Banners"
         name: "inlineBanners"
+        file: "src/_data/inlineBanners.yaml"
         allow_add: true
         collapsed: false
-        file: "src/_data/inlineBanners.yaml"
         fields:
           - label: "Inline Banner Items"
             name: "inlineBanners"
@@ -151,7 +143,6 @@ collections:
             fields:
               - { label: "Banner Title", name: "title", widget: "string" }
               - { label: "Banner Image", name: "image", widget: "image" }
-
       - label: "Hero"
         name: "hero"
         file: "src/_data/hero.yaml"
