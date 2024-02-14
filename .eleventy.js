@@ -1,4 +1,7 @@
 const yaml = require("js-yaml");
+const fs = require('fs');
+const path = require('path');
+
 const { DateTime } = require("luxon");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const htmlmin = require("html-minifier");
@@ -11,10 +14,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setDataDeepMerge(true);
 
   // snipcart api key
-  const doc = yaml.load(fs.readFileSync('./_data/snipcartSettings.yaml', 'utf8'));
-  return {
-    snipcartApiKey: doc.snipcartApiKey
-  };
+  const snipcartSettingsPath = path.join(__dirname, 'src', '_data', 'snipcartSettings.yaml');
+  const doc = yaml.load(fs.readFileSync(snipcartSettingsPath, 'utf8'));
 
   // human readable date
   eleventyConfig.addFilter("readableDate", (dateObj) => {
