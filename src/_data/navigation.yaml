@@ -1,9 +1,13 @@
 items:
-  - text: About
-    url: /about
-  - text: Workshops
-    url: /workshops
-  - text: Store
-    url: /store
-  - text: Blog
-    url: /blog
+  - text: "About"
+    url: "/about"
+    show_nav_item: true
+  - text: "Workshops"
+    url: "/workshops"
+    show_nav_item: true
+  - text: "Store"
+    url: "/store"
+    show_nav_item: true
+  - text: "Blog"
+    url: "/blog"
+    show_nav_item: true

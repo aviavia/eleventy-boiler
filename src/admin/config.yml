@@ -40,6 +40,7 @@ collections:
             allow_add: false
             collapsed: false
             fields:
+              - { label: "Show", name: "show_nav_item", widget: "boolean", default: false, hint: "Enable to show this link on the navigation bar" }
               - { label: "Title", name: "text", widget: "string" }
               - { label: "URL", name: "url", widget: "string" }
 
