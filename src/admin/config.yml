@@ -36,6 +36,8 @@ collections:
         name: "blogPageSettings"
         file: "src/_data/blogPageSettings.yaml"
         fields:
+          - { label: "Show Blog Header", name: "show_section", widget: "boolean" }
+
           - { label: "Header", name: "header", widget: "string" }
           - { label: "Subheader", name: "subheader", widget: "string" }
           - { label: "SEO Content", name: "seoContent", widget: "text" }
@@ -58,6 +60,7 @@ collections:
         name: "links"
         file: "src/_data/quicklinks.yaml"
         fields:
+          - { label: "Show Section", name: "show_section", widget: "boolean" }
           - { label: "Header", name: "header", widget: "string" }
           - { label: "Short Description", name: "shortDescription", widget: "text" }
           - label: "Links"
@@ -74,6 +77,8 @@ collections:
         name: "settings"
         file: "src/_data/settings.yaml"
         fields:
+          - { label: "Show Footer", name: "show_footer", widget: "boolean" }
+
           - { label: "Name", name: "name", widget: "string" }
           - { label: "Author", name: "author", widget: "string" }
           - { label: "URL", name: "url", widget: "string" }
@@ -95,31 +100,12 @@ collections:
             widget: "boolean"
             default: false
             hint: "Enable for RTL. Leave disabled for LTR."
-          - label: "Show Hero Section"
-            name: "showHero"
-            widget: "boolean"
-            default: true
-          - label: "Show Features Section"
-            name: "showFeatures"
-            widget: "boolean"
-            default: true
-          - label: "Show About Section"
-            name: "showAbout"
-            widget: "boolean"
-            default: true
-          - label: "Show Testimonials Section"
-            name: "showTestimonials"
-            widget: "boolean"
-            default: true
-          - label: "Show Inline Banners Section"
-            name: "showBanners"
-            widget: "boolean"
-            default: true
 
       - label: "About"
         name: "about"
         file: "src/_data/about.yaml"
         fields:
+          - { label: "Show Section", name: "show_section", widget: "boolean" }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Content", name: "content", widget: "text" }
           - { label: "Image", name: "image", widget: "image" }
@@ -128,6 +114,7 @@ collections:
         name: "testimonials"
         file: "src/_data/testimonials.yaml"
         fields:
+          - { label: "Show Section", name: "show_section", widget: "boolean" }
           - { label: "Header", name: "header", widget: "string" }
           - { label: "Short Description", name: "shortDescription", widget: "text" }
           - label: "Testimonial Items"
@@ -143,6 +130,7 @@ collections:
         name: "features"
         file: "src/_data/features.yaml"
         fields:
+          - { label: "Show Section", name: "show_section", widget: "boolean" }
           - { label: "Header", name: "header", widget: "string" }
           - { label: "Short Description", name: "shortDescription", widget: "text" }
           - label: "Feature Items"
@@ -157,6 +145,9 @@ collections:
         name: "inlineBanners"
         file: "src/_data/inlineBanners.yaml"
         fields:
+          - { label: "Show Section", name: "show_sction", widget: "boolean", default: true, hint: "Select to show or hide this section in Home page" }
+          - { label: "Header", name: "header", widget: "string" }
+          - { label: "Short Description", name: "shortDescription", widget: "text" }
           - label: "Inline Banner Items"
             name: "inlineBanners"
             widget: "list"
@@ -168,6 +159,7 @@ collections:
         name: "hero"
         file: "src/_data/hero.yaml"
         fields:
+          - { label: "Show Section", name: "show_section", widget: "boolean" }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Subtitle", name: "subtitle", widget: "string" }
           - { label: "Image", name: "image", widget: "image" }

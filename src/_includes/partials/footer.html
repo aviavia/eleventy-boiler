@@ -1,3 +1,6 @@
+
+{% if settings.show_footer %}
+
 <footer class="{{ 'fixed' if path == 'home' }} bottom-0 text-center w-full py-4">
     <small class="text-gray-500">Copyright ©
         {{settings.name}}
@@ -7,3 +10,4 @@
         <a href="https://jamstack.agency" class="underline" target="_blank" rel="noopener">View on Github</a>
     </small>
 </footer>
+{{ endif }}

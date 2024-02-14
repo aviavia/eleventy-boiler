@@ -1,34 +1,14 @@
----
-layout: default
-title: "{{ blogPageSettings.header }}"
----
+
 
 <div class="bg-white py-6 sm:py-8 lg:py-12">
-  <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
-    <div class="mb-10 md:mb-16">
-      <h2 class="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl">{{ blogPageSettings.header }}</h2>
-      <p class="mx-auto max-w-screen-md text-center text-gray-500 md:text-lg">{{ blogPageSettings.subheader }}</p>
-      <img src="{{ blogPageSettings.mainImage }}" alt="Blog Header Image">
-    </div>
-
-    <div class="grid gap-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-3 xl:grid-cols-4 xl:gap-8">
-      {% for post in collections.blog %}
-        {% if post.data.isPublished and not post.data.isRestricted %}
-          <div class="flex flex-col overflow-hidden rounded-lg border bg-white">
-            <a href="{{ post.url }}" class="group relative block h-48 overflow-hidden bg-gray-100 md:h-64">
-              <img src="{{ post.data.image }}" loading="lazy" alt="{{ post.data.title }}" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
-            </a>
-
-            <div class="flex flex-1 flex-col p-4 sm:p-6">
-              <h2 class="mb-2 text-lg font-semibold text-gray-800">
-                <a href="{{ post.url }}" class="transition duration-100 hover:text-indigo-500 active:text-indigo-600">{{ post.data.title }}</a>
-              </h2>
-              <p class="mb-8 text-gray-500">{{ post.data.description }}</p>
-              <!-- Additional post details here -->
-            </div>
-          </div>
-        {% endif %}
-      {% endfor %}
+    <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
+      <div class="mb-10 md:mb-16">
+        <h2 class="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl">{{ blogPageSettings.header }}</h2>
+        <p class="mx-auto max-w-screen-md text-center text-gray-500 md:text-lg">{{ blogPageSettings.subheader }}</p>
+        <img src="{{ blogPageSettings.image }}" alt="Blog Header Image">
+      </div>
+  
+      
     </div>
   </div>
-</div>
+  

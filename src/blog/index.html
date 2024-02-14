@@ -6,7 +6,11 @@ layout: blog
     {% set postslist = collections.post %}
 
     {% for post in postslist | reverse %}
+    {% if post.data.isPublished and not post.data.isRestricted %}
         <article class="my-8">
+            <a href="{{ post.url }}" class="group relative block h-48 overflow-hidden bg-gray-100 md:h-64">
+                <img src="{{ post.data.image }}" loading="lazy" alt="{{ post.data.title }}" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
+              </a>
             <h2 class="font-bold text-3xl text-gray-900 mb-2">
                 <a href="{{ post.url | url }}">
                     {% if post.data.title %}
@@ -37,5 +41,40 @@ layout: blog
             </p>
 
         </article>
+        {% endif %}
     {% endfor %}
+    <div class="grid gap-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-3 xl:grid-cols-4 xl:gap-8">
+        {% for post in collections.post %}
+          {% if post.data.isPublished and not post.data.isRestricted %}
+            <div class="flex flex-col overflow-hidden rounded-lg border">
+              <a href="{{ post.url }}" class="group relative block h-48 overflow-hidden bg-gray-100 md:h-64">
+                <img src="{{ post.data.image }}" loading="lazy" alt="{{ post.data.title }}" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
+              </a>
+  
+              <div class="flex flex-1 flex-col p-4 sm:p-6">
+                <h2 class="mb-2 text-lg font-semibold text-gray-800">
+                  <a href="{{ post.url }}" class="transition duration-100 hover:text-indigo-500 active:text-indigo-600">{{ post.data.title }}</a>
+                </h2>
+                <p class="mb-8 text-gray-500">{{ post.data.description }}</p>
+  
+                <div class="mt-auto flex items-end justify-between">
+                  <div class="flex items-center gap-2">
+                    <div class="h-10 w-10 shrink-0 overflow-hidden rounded-full bg-gray-100">
+                      <img src="{{ post.data.authorImage }}" loading="lazy" alt="{{ post.data.author }}" class="h-full w-full object-cover object-center" />
+                    </div>
+  
+                    <div>
+                      <span class="block text-indigo-500">{{ post.data.author }}</span>
+                      <span class="block text-sm text-gray-400">{{ post.date }}</span>
+                    </div>
+                  </div>
+  
+                  <span class="rounded border px-2 py-1 text-sm text-gray-500">Article</span>
+                </div>
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    
 </section>

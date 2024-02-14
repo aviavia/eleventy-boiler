@@ -25,6 +25,8 @@
     {{ content | safe }}
     {% if page.url == '/' %}
     {% include "./partials/hero.html" %}
+    {% include "./partials/inlineBanners.html" %}
+
     {% include "./partials/features.html" %}
     {% include "./partials/about.html" %}
     {% include "./partials/testimonials.html" %}
