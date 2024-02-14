@@ -10,6 +10,12 @@ module.exports = function (eleventyConfig) {
   // Merge data instead of overriding
   eleventyConfig.setDataDeepMerge(true);
 
+  // snipcart api key
+  const doc = yaml.load(fs.readFileSync('./_data/snipcartSettings.yaml', 'utf8'));
+  return {
+    snipcartApiKey: doc.snipcartApiKey
+  };
+
   // human readable date
   eleventyConfig.addFilter("readableDate", (dateObj) => {
     return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat(
