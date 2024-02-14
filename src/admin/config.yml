@@ -33,13 +33,13 @@ collections:
       preview: false
     files:
       - label: "Blog Page Settings"
-              name: "blogPageSettings"
-              file: "src/_data/blogPageSettings.yaml"
-              fields:
-                - { label: "Header", name: "header", widget: "string" }
-                - { label: "Subheader", name: "subheader", widget: "string" }
-                - { label: "SEO Content", name: "seoContent", widget: "text" }
-                - { label: "Image", name: "image", widget: "image" }    
+        name: "blogPageSettings"
+        file: "src/_data/blogPageSettings.yaml"
+        fields:
+          - { label: "Header", name: "header", widget: "string" }
+          - { label: "Subheader", name: "subheader", widget: "string" }
+          - { label: "SEO Content", name: "seoContent", widget: "text" }
+          - { label: "Image", name: "image", widget: "image" }    
       - label: "Navigation"
         name: "items"
         file: "src/_data/navigation.yaml"
