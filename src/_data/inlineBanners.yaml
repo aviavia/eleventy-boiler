@@ -1,7 +1,13 @@
 show_section: true
-header: "Trusted by the best"
-shortDescription: "Description here..popular pages."
+show_sction: true
+header: Trusted by the best
+shortDescription: Description here..popular pages.
 inlineBanners:
-  - title: "Spring Sale"
-    image: "/static/img/spring-sale.jpg"
-  
+  - title: Spring Sale
+    image: /static/img/tailwind-css-logo.png
+  - title: jamstack
+    image: /static/img/netlify-logo-2.png
+  - title: react
+    image: /static/img/tailwindlogo.jpeg
+  - title: wfwefwe
+    image: /static/img/graphql.png
