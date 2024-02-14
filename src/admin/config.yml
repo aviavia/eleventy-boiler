@@ -24,6 +24,7 @@ collections:
         multiple: true
         create: true
         options: ["Tags", "created", "from"]
+
   - label: "Settings"
     name: "settings"
     editor:
@@ -41,11 +42,14 @@ collections:
             fields:
               - { label: "Title", name: "text", widget: "string" }
               - { label: "URL", name: "url", widget: "string" }
+
       - label: "Quick Links"
         name: "links"
         file: "src/_data/quicklinks.yaml"
         fields:
-          - label: "Nav Items"
+          - { label: "Header", name: "header", widget: "string" }
+          - { label: "Short Description", name: "shortDescription", widget: "text" }
+          - label: "Links"
             name: "links"
             widget: "list"
             collapsed: false
@@ -54,6 +58,7 @@ collections:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "URL", name: "url", widget: "string" }
               - { label: "Description", name: "desc", widget: "string" }
+
       - label: "Meta Settings"
         name: "settings"
         file: "src/_data/settings.yaml"
@@ -63,11 +68,13 @@ collections:
           - { label: "URL", name: "url", widget: "string" }
           - { label: "Site Title", name: "siteTitle", widget: "string" }
           - { label: "Site SEO description", name: "siteSeoDescription", widget: "string" }
+
       - label: "Store Settings"
         name: "snipcartSettings"
         file: "src/_data/snipcartSettings.yaml"
         fields:
           - { label: "Snipcart API Key", name: "name", widget: "string" }
+
       - label: "Home Page Settings"
         name: "homeSettings"
         file: "src/_data/homeSettings.yaml"
@@ -97,6 +104,7 @@ collections:
             name: "showBanners"
             widget: "boolean"
             default: true
+
       - label: "About"
         name: "about"
         file: "src/_data/about.yaml"
@@ -104,12 +112,13 @@ collections:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Content", name: "content", widget: "text" }
           - { label: "Image", name: "image", widget: "image" }
+
       - label: "Testimonials"
         name: "testimonials"
         file: "src/_data/testimonials.yaml"
-        allow_add: true
-        collapsed: false
         fields:
+          - { label: "Header", name: "header", widget: "string" }
+          - { label: "Short Description", name: "shortDescription", widget: "text" }
           - label: "Testimonial Items"
             name: "testimonials"
             widget: "list"
@@ -118,12 +127,13 @@ collections:
               - { label: "Content", name: "content", widget: "text" }
               - { label: "Image", name: "image", widget: "image" }
               - { label: "Job", name: "job", widget: "string" }
+
       - label: "Features"
         name: "features"
         file: "src/_data/features.yaml"
-        allow_add: true
-        collapsed: false
         fields:
+          - { label: "Header", name: "header", widget: "string" }
+          - { label: "Short Description", name: "shortDescription", widget: "text" }
           - label: "Feature Items"
             name: "features"
             widget: "list"
@@ -131,11 +141,10 @@ collections:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Content", name: "content", widget: "text" }
               - { label: "Image", name: "image", widget: "image" }
+
       - label: "Inline Banners"
         name: "inlineBanners"
         file: "src/_data/inlineBanners.yaml"
-        allow_add: true
-        collapsed: false
         fields:
           - label: "Inline Banner Items"
             name: "inlineBanners"
@@ -143,6 +152,7 @@ collections:
             fields:
               - { label: "Banner Title", name: "title", widget: "string" }
               - { label: "Banner Image", name: "image", widget: "image" }
+
       - label: "Hero"
         name: "hero"
         file: "src/_data/hero.yaml"
