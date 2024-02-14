@@ -1,31 +1,24 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-    <head>
-        <!-- Your custom widget script -->
-        <script src="customWidgets.js"></script>
-        <meta charset="utf-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>Content Manager</title>
-    </head>
-    <body>
-        <!-- Include the script that builds the page and powers Netlify CMS -->
-        <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Netlify CMS Admin</title>
+</head>
+<body>
+  <!-- Include Netlify Identity Widget for authentication -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
-        <!-- Netlify Identity Widget -->
-        <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <!-- Your custom script should be included here -->
+  <script src="/admin/customWidgets.js"></script>
 
-        <!-- Custom widgets for Netlify CMS -->
-        <script type="text/javascript">
-            // Ensure Netlify CMS is initialized before we try to register widgets
-            if (window.CMS) {
-                // Register the custom widgets
-                CMS.registerWidget('audio', AudioWidgetControl, AudioWidgetPreview);
-                CMS.registerWidget('video', VideoWidgetControl, VideoWidgetPreview);
-            } else {
-                console.error("Netlify CMS not found");
-            }
-        </script>
+  <!-- Include the CMS script -->
+  <script src="https://unpkg.com/netlify-cms-app@2.12.19/dist/netlify-cms-app.js"></script>
 
-        
-    </body>
+  <!-- Initialize the CMS and possibly use your custom scripts here -->
+  <script>
+    CMS.init();
+    // Additional CMS customization with JavaScript can go here
+  </script>
+</body>
 </html>
