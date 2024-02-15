@@ -12,7 +12,6 @@
   <meta name="description" content="{{description}}" />
   {% endif %}
   {% block head %}{% endblock %}
-  <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
   <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
   {% if prism == true %}
@@ -42,9 +41,7 @@
   <script src="/static/js/alpine.js"></script>
 
   {% if path == "home" %}
-  <!-- Netlify Identity Widget -->
-  <!-- Needed only if you are using Netlify Identity feature -->
-  <script src="https://unpkg.com/netlify-cms-app@latest/dist/netlify-cms-app.js"></script>
+  
 
 
   {% endif %}

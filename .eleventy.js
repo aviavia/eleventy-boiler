@@ -1,7 +1,4 @@
 const yaml = require("js-yaml");
-const fs = require('fs');
-const path = require('path');
-
 const { DateTime } = require("luxon");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const htmlmin = require("html-minifier");
@@ -12,12 +9,6 @@ module.exports = function (eleventyConfig) {
 
   // Merge data instead of overriding
   eleventyConfig.setDataDeepMerge(true);
-  eleventyConfig.addPassthroughCopy("admin");
-
-
-  // snipcart api key
-  const snipcartSettingsPath = path.join(__dirname, 'src', '_data', 'snipcartSettings.yaml');
-  const doc = yaml.load(fs.readFileSync(snipcartSettingsPath, 'utf8'));
 
   // human readable date
   eleventyConfig.addFilter("readableDate", (dateObj) => {
@@ -35,7 +26,7 @@ module.exports = function (eleventyConfig) {
 
   // Copy Static Files to /_Site
   eleventyConfig.addPassthroughCopy({
-    "./src/admin/config.yaml": "./admin/config.yaml",
+    "./src/admin/config.yml": "./admin/config.yml",
     "./node_modules/alpinejs/dist/cdn.min.js": "./static/js/alpine.js",
     "./node_modules/prismjs/themes/prism-tomorrow.css":
       "./static/css/prism-tomorrow.css",
