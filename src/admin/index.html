@@ -1,24 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jamstack Agency - Netlify CMS Admin</title>
+  <title>Content Manager</title>
 </head>
 <body>
-  <!-- Include Netlify Identity Widget for authentication -->
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-
-  <!-- Your custom script should be included here -->
-  <!-- <script src="/admin/customWidgets.js"></script> -->
-
-  <!-- Include the CMS script -->
-  <script src="https://unpkg.com/netlify-cms-app@2.12.19/dist/netlify-cms-app.js"></script>
-
-  <!-- Initialize the CMS and possibly use your custom scripts here -->
-  <!-- <script>
-    CMS.init();
-    // Additional CMS customization with JavaScript can go here
-  </script> -->
+  <script src="https://unpkg.com/netlify-cms-app@2.10.50/dist/netlify-cms-app.js"></script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
 </body>
 </html>
