@@ -18,6 +18,8 @@ collections:
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Image", name: "image", widget: "image" }
       - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Featured Audio Link", name: "featuredAudio", widget: "string", required: false, hint: "URL to the audio file" }
+      - { label: "Featured Video Link", name: "featuredVideo", widget: "string", required: false, hint: "URL to the video file" }
       - widget: select
         label: "Tags"
         name: "tags"
@@ -37,11 +39,10 @@ collections:
         file: "src/_data/blogPageSettings.yaml"
         fields:
           - { label: "Show Blog Header", name: "show_section", widget: "boolean" }
-
           - { label: "Header", name: "header", widget: "string" }
           - { label: "Subheader", name: "subheader", widget: "string" }
           - { label: "SEO Content", name: "seoContent", widget: "text" }
-          - { label: "Image", name: "image", widget: "image" }    
+          - { label: "Image", name: "image", widget: "image" }
       - label: "Navigation"
         name: "items"
         file: "src/_data/navigation.yaml"
@@ -55,7 +56,6 @@ collections:
               - { label: "Show", name: "show_nav_item", widget: "boolean", default: false, hint: "Enable to show this link on the navigation bar" }
               - { label: "Title", name: "text", widget: "string" }
               - { label: "URL", name: "url", widget: "string" }
-
       - label: "Quick Links"
         name: "links"
         file: "src/_data/quicklinks.yaml"
@@ -72,35 +72,26 @@ collections:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "URL", name: "url", widget: "string" }
               - { label: "Description", name: "desc", widget: "string" }
-
       - label: "Meta Settings"
         name: "settings"
         file: "src/_data/settings.yaml"
         fields:
           - { label: "Show Footer", name: "show_footer", widget: "boolean" }
-
           - { label: "Name", name: "name", widget: "string" }
           - { label: "Author", name: "author", widget: "string" }
           - { label: "URL", name: "url", widget: "string" }
           - { label: "Site Title", name: "siteTitle", widget: "string" }
           - { label: "Site SEO description", name: "siteSeoDescription", widget: "string" }
-
       - label: "Store Settings"
         name: "snipcartSettings"
         file: "src/_data/snipcartSettings.yaml"
         fields:
-          - { label: "Snipcart API Key", name: "name", widget: "string" }
-
+          - { label: "Snipcart API Key", name: "snipcartApiKey", widget: "string" } # Updated field name to match usage
       - label: "Home Page Settings"
         name: "homeSettings"
         file: "src/_data/homeSettings.yaml"
         fields:
-          - label: "Direction"
-            name: "direction"
-            widget: "boolean"
-            default: false
-            hint: "Enable for RTL. Leave disabled for LTR."
-
+          - { label: "Direction", name: "direction", widget: "boolean", default: false, hint: "Enable for RTL. Leave disabled for LTR." }
       - label: "About"
         name: "about"
         file: "src/_data/about.yaml"
@@ -109,7 +100,6 @@ collections:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Content", name: "content", widget: "text" }
           - { label: "Image", name: "image", widget: "image" }
-
       - label: "Testimonials"
         name: "testimonials"
         file: "src/_data/testimonials.yaml"
@@ -125,7 +115,6 @@ collections:
               - { label: "Content", name: "content", widget: "text" }
               - { label: "Image", name: "image", widget: "image" }
               - { label: "Job", name: "job", widget: "string" }
-
       - label: "Features"
         name: "features"
         file: "src/_data/features.yaml"
@@ -140,12 +129,11 @@ collections:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Content", name: "content", widget: "text" }
               - { label: "Image", name: "image", widget: "image" }
-
       - label: "Inline Banners"
         name: "inlineBanners"
         file: "src/_data/inlineBanners.yaml"
         fields:
-          - { label: "Show Section", name: "show_sction", widget: "boolean", default: true, hint: "Select to show or hide this section in Home page" }
+          - { label: "Show Section", name: "show_section", widget: "boolean", default: true, hint: "Select to show or hide this section in Home page" }
           - { label: "Header", name: "header", widget: "string" }
           - { label: "Short Description", name: "shortDescription", widget: "text" }
           - label: "Inline Banner Items"
@@ -154,7 +142,6 @@ collections:
             fields:
               - { label: "Banner Title", name: "title", widget: "string" }
               - { label: "Banner Image", name: "image", widget: "image" }
-
       - label: "Hero"
         name: "hero"
         file: "src/_data/hero.yaml"
